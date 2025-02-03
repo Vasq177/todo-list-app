@@ -42,8 +42,8 @@ const AddTodo = ({ onAddTodo }: AddTodoProps) => {
           aria-label="Add new todo"
         />
         <div className="join-item dropdown dropdown-end">
-          <button 
-            type="button"
+          <label 
+            tabIndex={0} 
             className={`btn btn-circle ${
               priority === 'high' ? 'btn-error' :
               priority === 'medium' ? 'btn-warning' :
@@ -51,8 +51,8 @@ const AddTodo = ({ onAddTodo }: AddTodoProps) => {
             }`}
           >
             <FaFlag />
-          </button>
-          <ul className="dropdown-content z-10 menu p-2 shadow bg-base-100 rounded-box w-52">
+          </label>
+          <ul tabIndex={0} className="dropdown-content z-10 menu p-2 shadow bg-base-100 rounded-box w-52">
             <li>
               <button 
                 type="button"
