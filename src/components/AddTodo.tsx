@@ -41,7 +41,7 @@ const AddTodo = ({ onAddTodo }: AddTodoProps) => {
           className="input input-bordered join-item w-full focus:outline-none"
           aria-label="Add new todo"
         />
-        <div className="join-item">
+        <div className="join-item dropdown dropdown-end">
           <button 
             type="button"
             className={`btn btn-circle ${
@@ -52,6 +52,35 @@ const AddTodo = ({ onAddTodo }: AddTodoProps) => {
           >
             <FaFlag />
           </button>
+          <ul className="dropdown-content z-10 menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li>
+              <button 
+                type="button"
+                onClick={() => setPriority('high')}
+                className="text-error"
+              >
+                High Priority
+              </button>
+            </li>
+            <li>
+              <button 
+                type="button"
+                onClick={() => setPriority('medium')}
+                className="text-warning"
+              >
+                Medium Priority
+              </button>
+            </li>
+            <li>
+              <button 
+                type="button"
+                onClick={() => setPriority('low')}
+                className="text-success"
+              >
+                Low Priority
+              </button>
+            </li>
+          </ul>
         </div>
         <div className="join-item">
           <button
